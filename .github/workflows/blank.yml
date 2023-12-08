@@ -65,6 +65,6 @@ jobs:
         CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
         BUSINESSID: ${{ secrets.BUSINESS_GROUP_ID }}
       run: |
-        mvn package deploy -DmuleDeploy -Denvironment=dev -Dapp-name=hello-sk77 \
+        mvn clean deploy -DmuleDeploy -Denvironment=dev -Dapp-name=hello-sk77 \
         -Dca.clientId=${{ secrets.CA_CLIENT_ID }} -Dca.clientSecret=${{ secrets.CA_CLIENT_SECRET }} \
         -DbusinessGroupId=${{ secrets.BUSINESS_GROUP_ID }} -Dcicd.welcome.message="SETT YOUR WELCOME MESSAGE" -Duser="Mr Muley"
